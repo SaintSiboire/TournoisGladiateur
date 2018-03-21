@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TournoisGladiateur.Data
 {
-	class Repository
+	public class Repository
 	{
 	}
 }
