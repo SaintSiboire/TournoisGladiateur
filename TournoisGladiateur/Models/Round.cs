@@ -9,6 +9,7 @@ namespace TournoisGladiateur.Models
 	public class Round
 	{
 		public int Id { get; set; }
-
+		public ICollection<Duel> Duels { get; set; }
+		
 	}
 }

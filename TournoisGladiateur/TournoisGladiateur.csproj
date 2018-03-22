@@ -53,6 +53,7 @@
     <Compile Include="Data\DatabaseInitializer.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Models\Duel.cs" />
+    <Compile Include="Models\DuelsResults.cs" />
     <Compile Include="Models\Gladiateur.cs" />
     <Compile Include="Models\Round.cs" />
     <Compile Include="Program.cs" />
