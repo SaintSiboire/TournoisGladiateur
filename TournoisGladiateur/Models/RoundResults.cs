@@ -7,7 +7,7 @@ using TournoisGladiateur.Data;
 
 namespace TournoisGladiateur.Models
 {
-	public class DuelsResults
+	public class RoundResults
 	{
 		public int Id { get; set; }
 		public int RoundId { get; set; }

@@ -33,6 +33,16 @@ namespace TournoisGladiateur
 			{
 				var duels = context.Duels;
 
+				List<int> duelsId = new List<int>();
+				duels.ToList().ForEach(d => duelsId.Add(d.Id));
+
+				var round = new Round()
+				{
+					DuelsId = duelsId
+				};
+				context.Rounds.Add(round);
+				context.SaveChanges();
+
 				foreach(var duel in duels)
 				{
 					var gladiator1Id = duel.FirstGladiatorId;
@@ -41,7 +51,7 @@ namespace TournoisGladiateur
 					var gladiator1 = context.Gladiators.Where(g => g.Id == gladiator1Id).SingleOrDefault();
 					var gladiator2 = context.Gladiators.Where(g => g.Id == gladiator2Id).SingleOrDefault();
 
-					Fights.Fight(gladiator1, gladiator2);
+					var fight = Fights.Fight(gladiator1, gladiator2);
 
 					Console.ReadLine();
 				}
