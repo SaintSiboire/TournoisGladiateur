@@ -51,16 +51,18 @@
   <ItemGroup>
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\DatabaseInitializer.cs" />
-    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Data\DuelsCreation.cs" />
+    <Compile Include="Data\Fights.cs" />
     <Compile Include="Models\Duel.cs" />
     <Compile Include="Models\DuelsResults.cs" />
-    <Compile Include="Models\Gladiateur.cs" />
+    <Compile Include="Models\Gladiator.cs" />
     <Compile Include="Models\Round.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

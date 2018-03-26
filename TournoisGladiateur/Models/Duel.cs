@@ -9,8 +9,8 @@ namespace TournoisGladiateur.Models
 	public class Duel
 	{
 		public int Id { get; set; }
-		public int FirstFighterId { get; set; }
-		public int SecondFighterId { get; set; }
+		public int FirstGladiatorId { get; set; }
+		public int SecondGladiatorId { get; set; }
 
 	}
 }

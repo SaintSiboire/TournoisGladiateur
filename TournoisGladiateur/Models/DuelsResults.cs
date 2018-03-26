@@ -11,6 +11,7 @@ namespace TournoisGladiateur.Models
 	{
 		public int Id { get; set; }
 		public int RoundId { get; set; }
-		public ICollection<Gladiateur> Winners { get; set; }
+		public List<int> WinnersId { get; set; }
+
 	}
 }

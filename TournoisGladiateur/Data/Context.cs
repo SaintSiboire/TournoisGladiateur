@@ -12,7 +12,7 @@ namespace TournoisGladiateur.Data
 	public class Context : DbContext
 	{
 		public DbSet<Duel> Duels { get; set; }
-		public DbSet<Gladiateur> Gladiateurs { get; set; }
+		public DbSet<Gladiator> Gladiators { get; set; }
 		public DbSet<Round>	Rounds { get; set; }
 
 		public Context()
