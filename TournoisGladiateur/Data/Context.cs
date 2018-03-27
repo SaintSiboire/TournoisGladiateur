@@ -14,6 +14,7 @@ namespace TournoisGladiateur.Data
 		public DbSet<Duel> Duels { get; set; }
 		public DbSet<Gladiator> Gladiators { get; set; }
 		public DbSet<Round>	Rounds { get; set; }
+		public DbSet<Participation> Participations { get; set; }
 
 		public Context()
 		{

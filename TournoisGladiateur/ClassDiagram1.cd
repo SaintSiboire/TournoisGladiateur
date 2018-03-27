@@ -3,7 +3,7 @@
   <Class Name="TournoisGladiateur.Data.Context">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAEAA=</HashCode>
       <FileName>Data\Context.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -28,11 +28,11 @@
       <FileName>Models\Duel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TournoisGladiateur.Models.DuelsResults">
+  <Class Name="TournoisGladiateur.Models.Participation">
     <Position X="1.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAgAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\DuelsResults.cs</FileName>
+      <HashCode>AAACAAgAQAAAAAIAAAAAAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Models\Participation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TournoisGladiateur.Models.Gladiator">
@@ -45,7 +45,7 @@
   <Class Name="TournoisGladiateur.Models.Round">
     <Position X="2.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAA=</HashCode>
       <FileName>Models\Round.cs</FileName>
     </TypeIdentifier>
   </Class>

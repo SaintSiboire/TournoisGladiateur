@@ -33,17 +33,11 @@ namespace TournoisGladiateur
 			{
 				var duels = context.Duels;
 
-				List<int> duelsId = new List<int>();
-				duels.ToList().ForEach(d => duelsId.Add(d.Id));
-
 				var round = new Round()
 				{
-					DuelsId = duelsId
 				};
-				context.Rounds.Add(round);
-				context.SaveChanges();
 
-				foreach(var duel in duels)
+				foreach (var duel in duels)
 				{
 					var gladiator1Id = duel.FirstGladiatorId;
 					var gladiator2Id = duel.SecondGladiatorId;
@@ -52,15 +46,50 @@ namespace TournoisGladiateur
 					var gladiator2 = context.Gladiators.Where(g => g.Id == gladiator2Id).SingleOrDefault();
 
 					var fight = Fights.Fight(gladiator1, gladiator2);
+					var winner = context.Gladiators.FirstOrDefault(g => g.Id == fight);
 
 					Console.ReadLine();
+
+
+					round.AddDuel(duel, winner);
+
 				}
-
-				
-
-				
-
+				context.Rounds.Add(round);
+				context.SaveChanges();
 			}
+				DuelsCreation.Duels();
+
+			using (var context = new Context())
+			{
+				var lastDuel = context.Participations.Select(p => p.DuelId).ToList();
+				var duelId = lastDuel.LastOrDefault();
+				var duels = context.Duels.Where(d => d.Id > duelId );
+
+				var round = new Round()
+				{
+				};
+
+				foreach (var duel in duels)
+				{
+					var gladiator1Id = duel.FirstGladiatorId;
+					var gladiator2Id = duel.SecondGladiatorId;
+
+					var gladiator1 = context.Gladiators.Where(g => g.Id == gladiator1Id).SingleOrDefault();
+					var gladiator2 = context.Gladiators.Where(g => g.Id == gladiator2Id).SingleOrDefault();
+
+					var fight = Fights.Fight(gladiator1, gladiator2);
+					var winner = context.Gladiators.FirstOrDefault(g => g.Id == fight);
+
+					Console.ReadLine();
+
+
+					round.AddDuel(duel, winner);
+
+				}
+				context.Rounds.Add(round);
+				context.SaveChanges();
+			}
+			
 		}
 
 	}

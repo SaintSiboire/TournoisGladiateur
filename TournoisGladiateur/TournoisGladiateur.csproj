@@ -54,7 +54,7 @@
     <Compile Include="Data\DuelsCreation.cs" />
     <Compile Include="Data\Fights.cs" />
     <Compile Include="Models\Duel.cs" />
-    <Compile Include="Models\RoundResults.cs" />
+    <Compile Include="Models\Participation.cs" />
     <Compile Include="Models\Gladiator.cs" />
     <Compile Include="Models\Round.cs" />
     <Compile Include="Program.cs" />

@@ -54,6 +54,8 @@ namespace TournoisGladiateur.Data
 			if (defender.Health <= 0)
 			{
 				Console.WriteLine($"{attacker.FirstName} remporte le duel face à {defender.FirstName}");
+				attacker.Health = 100;
+				defender.Health = 100;
 				return 1;
 			}
 			else

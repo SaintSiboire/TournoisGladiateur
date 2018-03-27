@@ -8,8 +8,22 @@ namespace TournoisGladiateur.Models
 {
 	public class Round
 	{
+		public Round()
+		{
+			Duels = new List<Participation>();
+		}
+
 		public int Id { get; set; }
-		public List<int> DuelsId { get; set; }
+		public ICollection<Participation> Duels { get; set; }
 		
+		public void AddDuel(Duel duel, Gladiator winner)
+		{
+			Duels.Add(new Participation()
+			{
+				Duel = duel,
+				Winners = winner
+			});
+		}
+
 	}
 }

@@ -7,11 +7,15 @@ using TournoisGladiateur.Data;
 
 namespace TournoisGladiateur.Models
 {
-	public class RoundResults
+	public class Participation
 	{
 		public int Id { get; set; }
 		public int RoundId { get; set; }
-		public List<int> WinnersId { get; set; }
+		public int DuelId { get; set; }
+		public Gladiator Winners { get; set; }
+
+		public Round Round { get; set; }
+		public Duel Duel { get; set; }
 
 	}
 }

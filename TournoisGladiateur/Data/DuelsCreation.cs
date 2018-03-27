@@ -13,7 +13,16 @@ namespace TournoisGladiateur.Data
 		{
 			using (var context = new Context())
 			{
-				var gladiators = context.Gladiators;
+				var roundId = context.Rounds.Count();
+				var gladiators = context.Gladiators.AsQueryable();
+
+				if (roundId >= 1)
+				{
+					var participations = context.Participations;
+					gladiators = participations.Where(p => p.RoundId == roundId).Select(p => p.Winners);
+										
+				}
+
 				int count = 0;
 				Gladiator g1, g2;
 				int g1Id = 0;
