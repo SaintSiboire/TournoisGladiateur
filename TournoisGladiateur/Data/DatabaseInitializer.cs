@@ -52,6 +52,46 @@ namespace TournoisGladiateur.Data
 			};
 			context.Gladiators.Add(gladiator4);
 
+			var gladiator5 = new Gladiator()
+			{
+				FirstName = "Jean",
+				LastName = "Chrétien",
+				Health = 100,
+				Weapon = 20,
+				Shield = 15
+			};
+			context.Gladiators.Add(gladiator5);
+
+			var gladiator6 = new Gladiator()
+			{
+				FirstName = "Jackie",
+				LastName = "Chang",
+				Health = 100,
+				Weapon = 20,
+				Shield = 5
+			};
+			context.Gladiators.Add(gladiator6);
+
+			var gladiator7 = new Gladiator()
+			{
+				FirstName = "Bob",
+				LastName = "L'Éponge",
+				Health = 100,
+				Weapon = 20,
+				Shield = 15
+			};
+			context.Gladiators.Add(gladiator7);
+
+			var gladiator8 = new Gladiator()
+			{
+				FirstName = "Donald",
+				LastName = "Duck",
+				Health = 100,
+				Weapon = 20,
+				Shield = 5
+			};
+			context.Gladiators.Add(gladiator8);
+
 			context.SaveChanges();
 		}
 	}
